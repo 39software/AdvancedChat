@@ -1,0 +1,15 @@
+[submodule "AdvancedChatLog"]
+	path = AdvancedChatLog
+	url = https://github.com/39software/AdvancedChatLog
+[submodule "AdvancedChatBox"]
+	path = AdvancedChatBox
+	url = https://github.com/39software/AdvancedChatBox
+[submodule "AdvancedChatFilters"]
+	path = AdvancedChatFilters
+	url = https://github.com/39software/AdvancedChatFilters
+[submodule "AdvancedChatHUD"]
+	path = AdvancedChatHUD
+	url = https://github.com/39software/AdvancedChatHUD
+[submodule "AdvancedChatCore"]
+	path = AdvancedChatCore
+	url = https://github.com/39software/AdvancedChatCore
