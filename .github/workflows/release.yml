@@ -1,0 +1,77 @@
+name: Build JARs for Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    name: Build and Release All Modules
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+            submodules: recursive
+      # 2. Set up Java environment
+      - name: Set Up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      # 3. Grant execute permission to Gradle wrapper
+      - name: Grant Execute Permission for Gradlew
+        run: chmod +x gradlew
+
+      # 4. Cache Gradle dependencies
+      - name: Cache Gradle Packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # 6. Build other modules
+      - name: Build Other Modules
+        run: |
+          MODULES=("AdvancedChatCore" "AdvancedChatBox" "AdvancedChatFilters" "AdvancedChatHUD" "AdvancedChatLog")
+          for module in "${MODULES[@]}"; do
+            echo "Building $module..."
+            cd "$module"
+            ./gradlew build
+            cd ..
+          done
+
+      # 7. Collect all JARs into a single directory
+      - name: Collect All JARs
+        run: |
+            mkdir -p all-jars
+            shopt -s extglob
+            cp */build/libs/!(*-sources).jar all-jars/
+        shell: bash
+
+      # 8. Upload all JARs as a single artifact
+      - name: Upload All JARs as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: "AdvancedChat-Jars"
+          path: all-jars
+          if-no-files-found: error
+
+      # 9. Upload all JARs to the GitHub Release
+      - name: Upload JARs to Release
+        if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: "all-jars/*.jar"
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
