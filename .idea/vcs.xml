@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AdvancedChatCore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AdvancedChatHUD" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AdvancedChatLog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/malilib" vcs="Git" />
+  </component>
+</project>

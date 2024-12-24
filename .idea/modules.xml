@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AdvancedChat-meta.iml" filepath="$PROJECT_DIR$/.idea/AdvancedChat-meta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatBox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatBox.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatBox.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatBox.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatCore.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatCore.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatCore.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatCore.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatFilters.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatFilters.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatFilters.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatFilters.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatHUD.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatHUD.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatHUD.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatHUD.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatLog.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatLog.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedChatLog.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedChatLog.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.github.darkkronicle.AdvancedChatCore.test.iml" filepath="$PROJECT_DIR$/.idea/modules/io.github.darkkronicle.AdvancedChatCore.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.github.darkkronicle.AdvancedChatHUD.test.iml" filepath="$PROJECT_DIR$/.idea/modules/io.github.darkkronicle.AdvancedChatHUD.test.iml" />
+    </modules>
+  </component>
+</project>

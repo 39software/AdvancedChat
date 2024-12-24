@@ -13,3 +13,6 @@
 [submodule "AdvancedChatCore"]
 	path = AdvancedChatCore
 	url = https://github.com/39software/AdvancedChatCore
+[submodule "malilib"]
+	path = malilib
+	url = https://github.com/sakura-ryoko/malilib
